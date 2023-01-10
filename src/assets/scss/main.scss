@@ -171,3 +171,36 @@ button {
     }
 }
 
+.cabinet__sidebar-nav {
+    .nav__links {
+        &-link {
+            span {
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+.channel-card-text {
+    .yellow-cl {
+        color: #F2994A;
+    }
+
+    .green-cl {
+        color: var(--main-green);
+    }
+
+    .cyan-cl {
+        color: var(--main-cyan);
+    }
+}
+
+.home__dashboard {
+    .item-num {
+        i {
+            color: var(--main-cyan);
+        }
+    }
+}

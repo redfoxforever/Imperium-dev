@@ -26,7 +26,7 @@
                 <div class="user-options">
                     <button class="user-options-btn"><i class="far fa-user user-icon"></i> <i class="fas fa-caret-down down-icon"></i></button>
 
-                    <div class="user-options-list">
+                    <div class="user-options-list" v-show="false">
                         <router-link class="user-options-item" v-for="(item, idx) in store.userOptionsList" :key="idx" :to="`/cabinet/${item.url}`" v-html="item.text">
                         </router-link>
                     </div>
@@ -63,7 +63,7 @@ export default {
     padding: 15px 0;
 
     .container {
-        max-width: 1470px;
+        max-width: 1470px !important;
     }
 
     .row {

@@ -21,8 +21,37 @@ const router = createRouter({
     {
       path: '/cabinet',
       name: 'cabinet',
-      component: () => import('@/views/CabinetView.vue')
-    }
+      redirect: '/cabinet/home',
+      component: () => import('@/views/CabinetView.vue'), 
+      children: [
+        {
+          path: 'home',
+          name: 'cabinet home',
+          component: () => import('@/views/CabinetHome.vue'), 
+        },
+        {
+          path: 'traders',
+          name: 'cabinet traders',
+          component: () => import('@/views/CabinetTraders.vue'), 
+        },
+        {
+          path: 'statistics',
+          name: 'cabinet statistics',
+          component: () => import('@/views/CabinetStatis.vue'), 
+        },
+        {
+          path: 'instruction',
+          name: 'cabinet instruction',
+          component: () => import('@/views/CabinetInstruction.vue'), 
+        },
+        {
+          path: 'support',
+          name: 'cabinet support',
+          component: () => import('@/views/CabinetSupport.vue'), 
+        },
+      ]
+    },
+    
   ]
 })
 
